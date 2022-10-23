@@ -14,6 +14,8 @@
 		BE20B6EF29049BD300E5C00E /* FocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20B6EE29049BD300E5C00E /* FocusTests.swift */; };
 		BE20B6F929049BD300E5C00E /* FocusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20B6F829049BD300E5C00E /* FocusUITests.swift */; };
 		BE20B6FB29049BD300E5C00E /* FocusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20B6FA29049BD300E5C00E /* FocusUITestsLaunchTests.swift */; };
+		BE20B70A2904A5AA00E5C00E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE20B7092904A5AA00E5C00E /* SettingsView.swift */; };
+		BE239B522904C7AE00ED4A92 /* IdleTimerState in Frameworks */ = {isa = PBXBuildFile; productRef = BE239B512904C7AE00ED4A92 /* IdleTimerState */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		BE20B6F429049BD300E5C00E /* FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE20B6F829049BD300E5C00E /* FocusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusUITests.swift; sourceTree = "<group>"; };
 		BE20B6FA29049BD300E5C00E /* FocusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BE20B7092904A5AA00E5C00E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BE239B4F2904BDBA00ED4A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE239B522904C7AE00ED4A92 /* IdleTimerState in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +99,10 @@
 		BE20B6DC29049BD200E5C00E /* Focus */ = {
 			isa = PBXGroup;
 			children = (
+				BE239B4F2904BDBA00ED4A92 /* Info.plist */,
 				BE20B6DD29049BD200E5C00E /* FocusApp.swift */,
 				BE20B6DF29049BD200E5C00E /* ContentView.swift */,
+				BE20B7092904A5AA00E5C00E /* SettingsView.swift */,
 				BE20B6E129049BD300E5C00E /* Assets.xcassets */,
 				BE20B6E329049BD300E5C00E /* Preview Content */,
 			);
@@ -143,6 +150,9 @@
 			dependencies = (
 			);
 			name = Focus;
+			packageProductDependencies = (
+				BE239B512904C7AE00ED4A92 /* IdleTimerState */,
+			);
 			productName = Focus;
 			productReference = BE20B6DA29049BD200E5C00E /* Focus.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +225,9 @@
 				Base,
 			);
 			mainGroup = BE20B6D129049BD200E5C00E;
+			packageReferences = (
+				BE239B502904C7AE00ED4A92 /* XCRemoteSwiftPackageReference "IdleTimerState" */,
+			);
 			productRefGroup = BE20B6DB29049BD200E5C00E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE20B70A2904A5AA00E5C00E /* SettingsView.swift in Sources */,
 				BE20B6E029049BD200E5C00E /* ContentView.swift in Sources */,
 				BE20B6DE29049BD200E5C00E /* FocusApp.swift in Sources */,
 			);
@@ -417,13 +431,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Focus/Preview Content\"";
+				DEVELOPMENT_TEAM = UN939ZPX52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Focus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,13 +461,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Focus/Preview Content\"";
+				DEVELOPMENT_TEAM = UN939ZPX52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Focus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE239B502904C7AE00ED4A92 /* XCRemoteSwiftPackageReference "IdleTimerState" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0x0001SUI/IdleTimerState.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE239B512904C7AE00ED4A92 /* IdleTimerState */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE239B502904C7AE00ED4A92 /* XCRemoteSwiftPackageReference "IdleTimerState" */;
+			productName = IdleTimerState;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE20B6D229049BD200E5C00E /* Project object */;
 }
